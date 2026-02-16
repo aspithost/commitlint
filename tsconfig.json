@@ -1,0 +1,7 @@
+{
+  "extends": "@abelspithost/tsconfig-node",
+  "exclude": ["**/*.mjs", "dist", "node_modules"],
+  "compilerOptions": {
+    "types": ["node", "vitest/globals"]
+  }
+}

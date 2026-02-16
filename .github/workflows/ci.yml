@@ -1,0 +1,12 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    uses: aspithost/actions/.github/workflows/build-node.yml@v1
+    with:
+      test-commands: npm run test:cov
