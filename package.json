@@ -45,7 +45,7 @@
     "test:unit": "vitest",
     "test:cov": "vitest run --coverage --coverage.reporter=text",
     "typecheck": "tsc --noEmit",
-    "prepare": "husky"
+    "prepare": "husky || true"
   },
   "dependencies": {
     "@commitlint/config-conventional": "^20.4.1",
