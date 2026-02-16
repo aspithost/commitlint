@@ -1,1 +1,1 @@
-export { default } from '@abelspithost/commitlint';
+export { default } from './src/index.js';
