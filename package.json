@@ -56,9 +56,11 @@
   "devDependencies": {
     "@abelspithost/eslint-config-ts": "^0.1.3",
     "@abelspithost/tsconfig-node": "^0.0.4",
+    "@commitlint/cli": "^20.4.1",
     "@types/node": "^24.10.11",
     "@vitest/coverage-v8": "^4.0.18",
     "eslint": "^9.39.2",
+    "husky": "^9.1.7",
     "jiti": "^2.6.1",
     "rimraf": "^6.1.2",
     "typescript": "^5.9.3",
