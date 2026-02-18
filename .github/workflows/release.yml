@@ -13,7 +13,7 @@ jobs:
   build:
     uses: aspithost/actions/.github/workflows/build-node.yml@v1
     with:
-      test-commands: npm run test:cov
+      test-command: npm run test:cov
       upload-artifact: true
 
   release:
