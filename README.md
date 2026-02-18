@@ -1,12 +1,12 @@
 # @abelspithost/commitlint
 
-A shared [commitlint](https://commitlint.js.org/) preset that extends `@commitlint/config-conventional` with stricter defaults, plus a CLI to set everything up in one command.
+A shared [commitlint](https://commitlint.js.org/) preset that extends `@commitlint/config-conventional` with stricter defaults, plus a CLI to set everything up with one command.
 
 ## What's included
 
 - Commitlint configuration that extends `@commitlint/config-conventional`
 - Scope is optional by default
-- A `createConfig` helper to customize allowed types and scopes (providing scopes makes them mandatory)
+- A `createConfig` helper to customize allowed types and scopes (when you provide scopes, they become mandatory)
 - An `init` CLI that installs and configures commitlint + husky automatically
 - Automatic package manager detection (npm, yarn, pnpm, bun)
 
@@ -18,17 +18,17 @@ Run the init command in your project root:
 npx -p @abelspithost/commitlint init
 ```
 
-The CLI automatically detects your package manager by looking for `bun.lockb`/`bun.lock`, `pnpm-lock.yaml`, `yarn.lock`, or falling back to npm. It will:
+The CLI detects your package manager by looking for `bun.lockb`/`bun.lock`, `pnpm-lock.yaml`, `yarn.lock`, or falling back to npm. It will:
 
 1. Install `husky`, `@commitlint/cli`, and `@abelspithost/commitlint` as dev dependencies
 2. Initialize husky
-3. Remove the default `pre-commit` hook created by husky
+3. Remove the default `pre-commit` hook that husky creates
 4. Create a `.husky/commit-msg` hook (using the correct runner for your package manager)
-5. Generate a `commitlint.config.ts` that re-exports the preset (skipped if one already exists)
+5. Generate a `commitlint.config.ts` that re-exports the preset (skip if one already exists)
 
 ## Manual setup (npm)
 
-Install the dependencies:
+Install the required dependencies:
 
 ```sh
 npm install --save-dev husky @commitlint/cli @abelspithost/commitlint
@@ -71,7 +71,7 @@ export default createConfig({
 | `scopes` | `string[]` | —              | Restrict commits to these scopes (makes scope mandatory) |
 | `types`  | `string[]` | `COMMIT_TYPES` | Override the allowed commit types     |
 
-When `scopes` is omitted, scope is optional and any value is accepted. When `scopes` is provided, a scope becomes **required** and must be one of the listed values. When `types` is omitted, it defaults to the built-in `COMMIT_TYPES`.
+When you omit `scopes`, scope is optional and you can use any value. When you provide `scopes`, scope becomes **required** and must match one of the listed values. When you omit `types`, it defaults to the built-in `COMMIT_TYPES`.
 
 ### Examples
 
@@ -113,11 +113,11 @@ const configuration: UserConfig = {
 export default configuration;
 ```
 
-`RuleConfigSeverity` and `UserConfig` are re-exported from this package so you don't need to install `@commitlint/types` separately.
+This package re-exports `RuleConfigSeverity` and `UserConfig`, so you don't need to install `@commitlint/types` separately.
 
 ## Commit message format
 
-Commits must follow the [Conventional Commits](https://www.conventionalcommits.org/) format:
+Write your commits in the [Conventional Commits](https://www.conventionalcommits.org/) format:
 
 ```
 type: description
