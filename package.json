@@ -39,7 +39,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "npm run clean && tsc -p tsconfig.build.json",
+    "build": "npm run clean && npm run typecheck && tsc -p tsconfig.build.json",
     "clean": "rimraf dist",
     "lint": "eslint .",
     "test:unit": "vitest",
@@ -53,7 +53,7 @@
     "@commitlint/types": "^20.5.0"
   },
   "devDependencies": {
-    "@abelspithost/eslint-config-ts": "^1.0.3",
+    "@abelspithost/eslint-config-ts": "^1.1.0",
     "@abelspithost/tsconfig-node": "^0.0.5",
     "@commitlint/cli": "^20.5.0",
     "@types/node": "^24.12.2",
