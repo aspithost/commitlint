@@ -39,8 +39,11 @@
     "dist"
   ],
   "scripts": {
-    "build": "npm run clean && npm run typecheck && tsc -p tsconfig.build.json",
+    "build": "npm run clean && npm run typecheck && tsc -p tsconfig.build.json && npm run deps:check",
     "clean": "rimraf dist",
+    "deps:check": "npx -y npm-check-updates --cooldown 2",
+    "deps:update": "npx -y npm-check-updates -u --target minor --cooldown 2 && npm install",
+    "deps:update:major": "npx -y npm-check-updates -u --cooldown 2 && npm install",
     "lint": "eslint .",
     "test:unit": "vitest",
     "test:cov": "vitest run --coverage --coverage.reporter=text",
@@ -48,22 +51,22 @@
     "prepare": "husky || true"
   },
   "dependencies": {
-    "@commitlint/config-conventional": "^20.5.0",
-    "@commitlint/format": "^20.5.0",
-    "@commitlint/types": "^20.5.0"
+    "@commitlint/config-conventional": "^21.0.1",
+    "@commitlint/format": "^21.0.1",
+    "@commitlint/types": "^21.0.1"
   },
   "devDependencies": {
     "@abelspithost/eslint-config-ts": "^1.1.0",
     "@abelspithost/tsconfig-node": "^0.0.5",
-    "@commitlint/cli": "^20.5.0",
-    "@types/node": "^24.12.2",
-    "@vitest/coverage-v8": "^4.1.4",
-    "commitlint": "^20.5.0",
-    "eslint": "^10.2.0",
+    "@commitlint/cli": "^21.0.1",
+    "@types/node": "^24.12.4",
+    "@vitest/coverage-v8": "^4.1.6",
+    "commitlint": "^21.0.1",
+    "eslint": "^10.4.0",
     "husky": "^9.1.7",
-    "jiti": "^2.6.1",
+    "jiti": "^2.7.0",
     "rimraf": "^6.1.3",
-    "typescript": "^6.0.2",
-    "vitest": "^4.1.4"
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.6"
   }
 }
