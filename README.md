@@ -1,5 +1,7 @@
 # @abelspithost/commitlint
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=aspithost_commitlint&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=aspithost_commitlint)
+
 A shared [commitlint](https://commitlint.js.org/) preset that extends `@commitlint/config-conventional` with stricter defaults, plus a CLI to set everything up with one command.
 
 ## What's included
