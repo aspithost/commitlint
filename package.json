@@ -48,6 +48,7 @@
     "publint": "npx -y publint",
     "test:unit": "vitest",
     "test:cov": "vitest run --coverage --coverage.reporter=text",
+    "test:cov:ci": "vitest run --coverage",
     "typecheck": "tsc --noEmit",
     "prepare": "husky || true"
   },
