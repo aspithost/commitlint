@@ -10,6 +10,7 @@ jobs:
     uses: aspithost/actions/.github/workflows/build-node.yml@v1
     with:
       run-sonar: true
-      test-command: npm run test:cov
+      test-command: npm run test:cov:ci
+      generate-vitest-coverage-report: true
     secrets:
       sonar-token: ${{ secrets.SONAR_TOKEN }}

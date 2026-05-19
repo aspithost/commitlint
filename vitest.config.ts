@@ -24,10 +24,7 @@ export default defineConfig({
     environment: 'node',
 
     include: ['**/*.spec.ts'],
-    exclude: [
-      'dist',
-      'node_modules',
-    ],
+    exclude: ['dist','node_modules'],
 
     globals: true,
 
