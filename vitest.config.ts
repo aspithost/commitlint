@@ -11,6 +11,9 @@ export default defineConfig({
     clearMocks: true,
 
     coverage: {
+      reporter: ['json-summary', 'json'],
+      reportOnFailure: true,
+      exclude: ['**/constants/**'],
       thresholds: {
         branches: 90,
         functions: 95,
@@ -21,7 +24,10 @@ export default defineConfig({
     environment: 'node',
 
     include: ['**/*.spec.ts'],
-    exclude: ['dist', 'node_modules'],
+    exclude: [
+      'dist',
+      'node_modules',
+    ],
 
     globals: true,
 
