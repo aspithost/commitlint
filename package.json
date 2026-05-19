@@ -1,6 +1,6 @@
 {
   "name": "@abelspithost/commitlint",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Shared commitlint preset extending @commitlint/config-conventional with stricter defaults",
   "keywords": [
     "commitlint",
@@ -14,7 +14,7 @@
   "homepage": "https://github.com/aspithost/commitlint#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/aspithost/commitlint.git"
+    "url": "git+https://github.com/aspithost/commitlint.git"
   },
   "license": "ISC",
   "author": {
@@ -22,7 +22,7 @@
     "url": "https://github.com/aspithost"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "type": "module",
   "exports": {
@@ -44,7 +44,8 @@
     "deps:check": "npx -y npm-check-updates --cooldown 2",
     "deps:update": "npx -y npm-check-updates -u --target minor --cooldown 2 && npm install",
     "deps:update:major": "npx -y npm-check-updates -u --cooldown 2 && npm install",
-    "lint": "eslint .",
+    "lint": "eslint . && npm run publint",
+    "publint": "npx -y publint",
     "test:unit": "vitest",
     "test:cov": "vitest run --coverage --coverage.reporter=text",
     "typecheck": "tsc --noEmit",
@@ -56,7 +57,7 @@
     "@commitlint/types": "^21.0.1"
   },
   "devDependencies": {
-    "@abelspithost/eslint-config-ts": "^1.1.0",
+    "@abelspithost/eslint-config-ts": "^1.1.1",
     "@abelspithost/tsconfig-node": "^0.0.5",
     "@commitlint/cli": "^21.0.1",
     "@types/node": "^24.12.4",

@@ -1,6 +1,7 @@
 # @abelspithost/commitlint
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=aspithost_commitlint&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=aspithost_commitlint)
+![NPM Version](https://img.shields.io/npm/v/@abelspithost/commitlint)
 
 A shared [commitlint](https://commitlint.js.org/) preset that extends `@commitlint/config-conventional` with stricter defaults, plus a CLI to set everything up with one command.
 
@@ -11,6 +12,10 @@ A shared [commitlint](https://commitlint.js.org/) preset that extends `@commitli
 - A `createConfig` helper to customize allowed types and scopes (when you provide scopes, they become mandatory)
 - An `init` CLI that installs and configures commitlint + husky automatically
 - Automatic package manager detection (npm, yarn, pnpm, bun)
+
+## Requirements
+
+Supports Node.js version 22 and upwards only.
 
 ## Quick setup
 
