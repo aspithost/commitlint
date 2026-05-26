@@ -39,8 +39,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "npm run clean && npm run build:ci",
-    "build:ci": "npm run deps:check && npm run typecheck && tsc -p tsconfig.build.json",
+    "build": "npm run clean && npm run deps:check && npm run typecheck && tsc -p tsconfig.build.json",
     "clean": "rimraf dist",
     "deps:check": "npx -y npm-check-updates --cooldown 2",
     "deps:update": "npx -y npm-check-updates -u --target minor --cooldown 2 && npm install",
