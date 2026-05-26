@@ -13,6 +13,7 @@ jobs:
     with:
       run-sonar: true
       test-command: npm run test:unit
+      upload-artifact: true
     secrets:
       sonar-token: ${{ secrets.SONAR_TOKEN }}
 
