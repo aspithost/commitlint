@@ -8,6 +8,9 @@ on:
 jobs:
   build:
     uses: aspithost/actions/.github/workflows/build-node.yml@v1
+    permissions:
+      actions: read
+      contents: read
     with:
       run-sonar: true
       test-command: npm run test:unit
