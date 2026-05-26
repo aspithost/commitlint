@@ -5,17 +5,18 @@ on:
     branches: [main]
   workflow_dispatch:
 
-permissions:
-  contents: write
-  id-token: write
-  pull-requests: write
-
 jobs:
   build:
     uses: aspithost/actions/.github/workflows/build-node.yml@v1
+    permissions:
+      contents: read
+      pull-requests: write
     with:
-      test-command: npm run test:cov
-      upload-artifact: true
+      run-sonar: true
+      test-command: npm run test:cov:ci
+      generate-vitest-coverage-report: true
+    secrets:
+      sonar-token: ${{ secrets.SONAR_TOKEN }}
 
   release:
     needs: build
