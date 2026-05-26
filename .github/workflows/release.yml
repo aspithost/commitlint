@@ -5,12 +5,13 @@ on:
     branches: [main]
   workflow_dispatch:
 
+permissions:
+  contents: write
+  id-token: write
+
 jobs:
   build:
     uses: aspithost/actions/.github/workflows/build-node.yml@v1
-    permissions:
-      actions: read
-      contents: read
     with:
       run-sonar: true
       test-command: npm run test:unit
