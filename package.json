@@ -1,6 +1,6 @@
 {
   "name": "@abelspithost/commitlint",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Shared commitlint preset extending @commitlint/config-conventional with stricter defaults",
   "keywords": [
     "commitlint",
