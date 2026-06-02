@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 jobs:
-  build:
+  cicd:
     uses: aspithost/actions/.github/workflows/node-cicd.yml@v2
     permissions:
       contents: write
