@@ -6,14 +6,12 @@ on:
 
 jobs:
   build:
-    uses: aspithost/actions/.github/workflows/build-node.yml@v1
-    with:
-      test-command: npm run test:unit
-      upload-artifact: true
-
-  release:
-    needs: build
-    uses: aspithost/actions/.github/workflows/release-npm.yml@v1
+    uses: aspithost/actions/.github/workflows/node-cicd.yml@v2
     permissions:
       contents: write
       id-token: write
+    with:
+      test-command: npm run test:cov:ci
+      run-sonar: true
+    secrets:
+      sonar-token: ${{ secrets.SONAR_TOKEN }}
