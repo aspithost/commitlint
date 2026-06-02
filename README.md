@@ -1,5 +1,4 @@
 # @abelspithost/commitlint
-
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=aspithost_commitlint&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=aspithost_commitlint)
 ![NPM Version](https://img.shields.io/npm/v/@abelspithost/commitlint)
 
