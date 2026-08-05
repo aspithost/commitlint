@@ -11,18 +11,15 @@
     "husky",
     "git-hooks"
   ],
-  "homepage": "https://github.com/aspithost/commitlint#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/aspithost/commitlint.git"
-  },
   "license": "ISC",
   "author": {
     "name": "Abel Spithost",
     "url": "https://github.com/aspithost"
   },
-  "engines": {
-    "node": ">=22"
+  "homepage": "https://github.com/aspithost/commitlint#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aspithost/commitlint.git"
   },
   "type": "module",
   "exports": {
@@ -38,6 +35,9 @@
     "bin",
     "dist"
   ],
+  "engines": {
+    "node": ">=24"
+  },
   "scripts": {
     "build": "npm run clean && npm run deps:check && npm run typecheck && tsc -p tsconfig.build.json",
     "clean": "rimraf dist",
@@ -53,22 +53,22 @@
     "prepare": "husky || true"
   },
   "dependencies": {
-    "@commitlint/config-conventional": "^21.0.2",
-    "@commitlint/format": "^21.0.1",
-    "@commitlint/types": "^21.0.1"
+    "@commitlint/config-conventional": "^21.2.0",
+    "@commitlint/format": "^21.2.0",
+    "@commitlint/types": "^21.2.0"
   },
   "devDependencies": {
-    "@abelspithost/eslint-config-ts": "^1.1.2",
+    "@abelspithost/eslint-config-ts": "^1.1.3",
     "@abelspithost/tsconfig-node": "^0.1.0",
-    "@commitlint/cli": "^21.0.2",
-    "@types/node": "^24.13.2",
-    "@vitest/coverage-v8": "^4.1.9",
-    "commitlint": "^21.0.2",
-    "eslint": "^10.5.0",
+    "@commitlint/cli": "^21.2.1",
+    "@types/node": "^24.13.3",
+    "@vitest/coverage-v8": "^4.1.10",
+    "commitlint": "^21.2.1",
+    "eslint": "^10.8.0",
     "husky": "^9.1.7",
     "jiti": "^2.7.0",
     "rimraf": "^6.1.3",
     "typescript": "^6.0.3",
-    "vitest": "^4.1.9"
+    "vitest": "^4.1.10"
   }
 }
