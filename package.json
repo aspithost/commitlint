@@ -1,6 +1,6 @@
 {
   "name": "@abelspithost/commitlint",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Shared commitlint preset extending @commitlint/config-conventional with stricter defaults",
   "keywords": [
     "commitlint",
@@ -39,7 +39,7 @@
     "node": ">=24"
   },
   "scripts": {
-    "build": "npm run clean && npm run deps:check && npm run typecheck && tsc -p tsconfig.build.json",
+    "build": "npm run clean && npm run typecheck && tsc -p tsconfig.build.json && npm run deps:check",
     "clean": "rimraf dist",
     "deps:check": "npx -y npm-check-updates --cooldown 2",
     "deps:update": "npx -y npm-check-updates -u --target minor --cooldown 2 && npm install",
@@ -49,26 +49,26 @@
     "test:unit": "vitest",
     "test:cov": "vitest run --coverage --coverage.reporter=text",
     "test:cov:ci": "vitest run --coverage",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsc -p tsconfig.build.json --noEmit && tsc -p tsconfig.spec.json",
     "prepare": "husky || true"
   },
   "dependencies": {
-    "@commitlint/config-conventional": "^21.2.0",
-    "@commitlint/format": "^21.2.0",
+    "@commitlint/config-conventional": "^21.2.2",
+    "@commitlint/format": "^21.2.2",
     "@commitlint/types": "^21.2.0"
   },
   "devDependencies": {
     "@abelspithost/eslint-config-ts": "^1.1.3",
-    "@abelspithost/tsconfig-node": "^0.1.0",
-    "@commitlint/cli": "^21.2.1",
+    "@abelspithost/tsconfig-node": "^0.1.1",
+    "@commitlint/cli": "^21.2.2",
     "@types/node": "^24.13.3",
-    "@vitest/coverage-v8": "^4.1.10",
-    "commitlint": "^21.2.1",
-    "eslint": "^10.8.0",
+    "@vitest/coverage-v8": "^4.1.11",
+    "commitlint": "^21.2.2",
+    "eslint": "^10.9.0",
     "husky": "^9.1.7",
     "jiti": "^2.7.0",
     "rimraf": "^6.1.3",
     "typescript": "^6.0.3",
-    "vitest": "^4.1.10"
+    "vitest": "^4.1.11"
   }
 }
