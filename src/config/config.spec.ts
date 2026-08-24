@@ -1,4 +1,3 @@
-import { describe, expect, it } from 'vitest';
 import { RuleConfigSeverity } from '@commitlint/types';
 
 import { COMMIT_TYPES } from '@/constants/commitTypes.js';
