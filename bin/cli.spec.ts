@@ -1,6 +1,5 @@
 import type { MockInstance } from 'vitest';
 
-
 const mockExecSync = vi.fn();
 const mockExistsSync = vi.fn<(path: string) => boolean>();
 const mockUnlinkSync = vi.fn();
