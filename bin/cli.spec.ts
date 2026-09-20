@@ -168,7 +168,7 @@ describe('cli.mjs', () => {
 
       expect(mockWriteFileSync).toHaveBeenCalledWith(
         'commitlint.config.ts',
-        "export { default } from '@abelspithost/commitlint';\n",
+        'export { default } from \'@abelspithost/commitlint\';\n',
       );
     });
 

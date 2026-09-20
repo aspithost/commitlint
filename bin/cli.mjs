@@ -94,7 +94,7 @@ step('create commitlint config', () => {
   } else {
     writeFileSync(
       'commitlint.config.ts',
-      "export { default } from '@abelspithost/commitlint';\n",
+      'export { default } from \'@abelspithost/commitlint\';\n',
     );
     console.log('\nCreated commitlint.config.ts');
   }
