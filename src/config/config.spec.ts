@@ -1,7 +1,8 @@
 import { RuleConfigSeverity } from '@commitlint/types';
 
-import { COMMIT_TYPES } from '@/constants/commitTypes.js';
 import { configuration, createConfig } from './config.js';
+
+import { COMMIT_TYPES } from '@/constants/commitTypes.js';
 
 describe('config.ts', () => {
   describe('configuration', () => {
@@ -19,7 +20,11 @@ describe('config.ts', () => {
 
     it('restricts type to COMMIT_TYPES', () => {
       expect(configuration.rules?.['type-enum']).toStrictEqual(
-        [RuleConfigSeverity.Error, 'always', COMMIT_TYPES],
+        [
+          RuleConfigSeverity.Error,
+          'always',
+          COMMIT_TYPES,
+        ],
       );
     });
   });
@@ -29,7 +34,11 @@ describe('config.ts', () => {
       const config = createConfig({});
 
       expect(config.rules?.['type-enum']).toStrictEqual(
-        [RuleConfigSeverity.Error, 'always', COMMIT_TYPES],
+        [
+          RuleConfigSeverity.Error,
+          'always',
+          COMMIT_TYPES,
+        ],
       );
     });
 
@@ -38,7 +47,11 @@ describe('config.ts', () => {
       const config = createConfig({ types });
 
       expect(config.rules?.['type-enum']).toStrictEqual(
-        [RuleConfigSeverity.Error, 'always', types],
+        [
+          RuleConfigSeverity.Error,
+          'always',
+          types,
+        ],
       );
     });
 
@@ -57,7 +70,11 @@ describe('config.ts', () => {
         [RuleConfigSeverity.Error, 'never'],
       );
       expect(config.rules?.['scope-enum']).toStrictEqual(
-        [RuleConfigSeverity.Error, 'always', scopes],
+        [
+          RuleConfigSeverity.Error,
+          'always',
+          scopes,
+        ],
       );
     });
 
