@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 import { execSync } from 'node:child_process';
-import { existsSync, unlinkSync, writeFileSync } from 'node:fs';
+import {
+  existsSync, unlinkSync, writeFileSync,
+} from 'node:fs';
 
 function run(cmd) {
   return execSync(cmd, { stdio: 'inherit' });
@@ -37,7 +39,11 @@ function installCommand(pm, deps) {
 }
 
 const pm = detectPackageManager();
-const DEPS = ['husky', '@commitlint/cli', '@abelspithost/commitlint'];
+const DEPS = [
+  'husky',
+  '@commitlint/cli',
+  '@abelspithost/commitlint',
+];
 
 console.log(`Setting up commitlint with husky (using ${pm})...\n`);
 

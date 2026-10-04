@@ -23,7 +23,11 @@ const baseConfiguration: UserConfig = {
 export const configuration: UserConfig = {
   ...baseConfiguration,
   rules: {
-    'type-enum': [RuleConfigSeverity.Error, 'always', COMMIT_TYPES],
+    'type-enum': [
+      RuleConfigSeverity.Error,
+      'always',
+      COMMIT_TYPES,
+    ],
   },
 };
 
@@ -64,9 +68,17 @@ export function createConfig({
     rules: {
       ...(scopes && {
         'scope-empty': [RuleConfigSeverity.Error, 'never'],
-        'scope-enum': [RuleConfigSeverity.Error, 'always', scopes],
+        'scope-enum': [
+          RuleConfigSeverity.Error,
+          'always',
+          scopes,
+        ],
       }),
-      'type-enum': [RuleConfigSeverity.Error, 'always', types],
+      'type-enum': [
+        RuleConfigSeverity.Error,
+        'always',
+        types,
+      ],
     },
   };
 }
