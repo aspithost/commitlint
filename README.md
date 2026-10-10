@@ -3,19 +3,19 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=aspithost_commitlint&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=aspithost_commitlint)
 ![NPM Version](https://img.shields.io/npm/v/@abelspithost/commitlint)
 
-A shared [commitlint](https://commitlint.js.org/) preset that extends `@commitlint/config-conventional` with stricter defaults, plus a CLI to set everything up with one command.
+This package provides a shared [commitlint](https://commitlint.js.org/) preset. It extends `@commitlint/config-conventional` with stricter defaults and includes a CLI that configures everything with one command.
 
 ## What's included
 
 - Commitlint configuration that extends `@commitlint/config-conventional`
-- Scope is optional by default
-- A `createConfig` helper to customize allowed types and scopes (when you provide scopes, they become mandatory)
+- Comes with a default set of allowed commit types. You can override these allowed types via `createConfig` helper
+- A `createConfig` helper to customize allowed commit scopes and types
 - An `init` CLI that installs and configures commitlint + husky automatically
 - Automatic package manager detection (npm, yarn, pnpm, bun)
 
 ## Requirements
 
-Supports Node.js version 22 and upwards only.
+Use Node.js 24 or later.
 
 ## Quick setup
 
@@ -73,12 +73,12 @@ export default createConfig({
 
 ### Options
 
-| Option   | Type       | Default        | Description                          |
-| -------- | ---------- | -------------- | ------------------------------------ |
-| `scopes` | `string[]` | —              | Restrict commits to these scopes (makes scope mandatory) |
-| `types`  | `string[]` | `COMMIT_TYPES` | Override the allowed commit types     |
+| Option   | Type       | Default        | Description                           |
+| -------- | ---------- | -------------- | ------------------------------------- |
+| `scopes` | `string[]` | —              | Restrict commits to these scopes and require a scope |
+| `types`  | `string[]` | `COMMIT_TYPES` | Override the allowed commit types    |
 
-When you omit `scopes`, scope is optional and you can use any value. When you provide `scopes`, scope becomes **required** and must match one of the listed values. When you omit `types`, it defaults to the built-in `COMMIT_TYPES`.
+Omit `scopes` to keep scope optional and allow any scope value. Provide `scopes` to require a scope that matches one of the listed values. Omit `types` to use the built-in `COMMIT_TYPES`.
 
 ### Examples
 
@@ -120,7 +120,7 @@ const configuration: UserConfig = {
 export default configuration;
 ```
 
-This package re-exports `RuleConfigSeverity` and `UserConfig`, so you don't need to install `@commitlint/types` separately.
+The package re-exports `RuleConfigSeverity` and `UserConfig`; skip a separate `@commitlint/types` installation.
 
 ## Commit message format
 
