@@ -38,10 +38,9 @@ export const configuration: UserConfig = {
  * `@commitlint/config-conventional`, scope optional) and lets you
  * restrict the allowed scopes and/or override the allowed types.
  *
- * @param options - Configuration options.
- * @param options.scopes - Restrict commits to these scopes. When provided,
+ * @param scopes - Restrict commits to these scopes. When provided,
  *   a scope becomes **required** on every commit.
- * @param options.types - Override the allowed commit types.
+ * @param types - Override the allowed commit types.
  *   Defaults to {@link COMMIT_TYPES}.
  * @returns A `UserConfig` object ready to be exported from
  *   `commitlint.config.ts`.
@@ -53,6 +52,7 @@ export const configuration: UserConfig = {
  *
  * export default createConfig({
  *   scopes: ['api', 'ui', 'core'],
+ *   types: ['feat', 'fix', 'chore'],
  * });
  * ```
  */
