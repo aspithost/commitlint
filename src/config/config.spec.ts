@@ -1,8 +1,8 @@
 import { RuleConfigSeverity } from '@commitlint/types';
 
-import { configuration, createConfig } from './config.js';
+import { COMMIT_TYPES } from '../constants/commitTypes.js';
 
-import { COMMIT_TYPES } from '@/constants/commitTypes.js';
+import { configuration, createConfig } from './config.js';
 
 describe('config.ts', () => {
   describe('configuration', () => {
