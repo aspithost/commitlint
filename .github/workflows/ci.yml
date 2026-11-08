@@ -7,13 +7,13 @@ on:
 
 jobs:
   ci:
-    uses: aspithost/actions/.github/workflows/node-ci.yml@v2
+    uses: aspithost/actions/.github/workflows/node-ci.yml@v3
     permissions:
       contents: read
       pull-requests: write
     with:
       run-sonar: true
       test-command: npm run test:cov:ci
-      upload-vitest-coverage-report: true
+      upload-coverage-report: true
     secrets:
       sonar-token: ${{ secrets.SONAR_TOKEN }}
