@@ -1,7 +1,10 @@
 # @abelspithost/commitlint
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=aspithost_commitlint&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=aspithost_commitlint)
 ![NPM Version](https://img.shields.io/npm/v/@abelspithost/commitlint)
+![Build](https://img.shields.io/github/actions/workflow/status/aspithost/commitlint/ci.yml)
+[![Quality gate status](https://sonarcloud.io/api/project_badges/measure?project=aspithost_commitlint&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=aspithost_commitlint)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=aspithost_commitlint&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=aspithost_commitlint)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=aspithost_commitlint&metric=coverage)](https://sonarcloud.io/summary/new_code?id=aspithost_commitlint)
 
 This package provides a shared [commitlint](https://commitlint.js.org/) preset. It extends `@commitlint/config-conventional` with stricter defaults and includes a CLI that configures everything with one command.
 
