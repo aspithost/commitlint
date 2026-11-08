@@ -1,5 +1,11 @@
 I created this changelog with [@abelspithost/conventional-commits-changelog](https://github.com/aspithost/conventional-commits-changelog)
 
+## 0.2.2 (2026-11-08)
+
+### :construction_worker: Continuous Integration
+
+* add sonar project properties ([9529f99](https://github.com/aspithost/commitlint/commit/9529f99d81c30251888ec05088aa4fa8c3e89d73))
+
 ## 0.2.1 (2026-11-08)
 
 ### :construction_worker: Continuous Integration
