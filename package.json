@@ -1,6 +1,6 @@
 {
   "name": "@abelspithost/commitlint",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Shared commitlint preset extending @commitlint/config-conventional with stricter defaults",
   "keywords": [
     "commitlint",
@@ -58,9 +58,9 @@
     "@commitlint/types": "^21.2.3"
   },
   "devDependencies": {
-    "@abelspithost/eslint-config-ts": "^3.2.0",
+    "@abelspithost/eslint-config-ts": "^3.2.1",
     "@abelspithost/tsconfig-node": "^0.1.2",
-    "@abelspithost/vitest-config": "^0.1.1",
+    "@abelspithost/vitest-config": "^0.2.0",
     "@commitlint/cli": "^21.2.4",
     "@types/node": "^26.6.6",
     "@vitest/coverage-v8": "^5.1.0",
@@ -68,7 +68,7 @@
     "eslint": "^10.14.0",
     "husky": "^9.1.7",
     "jiti": "^2.7.0",
-    "rimraf": "^6.1.3",
+    "rimraf": "^6.1.4",
     "typescript": "^6.0.3",
     "vitest": "^5.1.0"
   }
