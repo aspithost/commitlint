@@ -1,6 +1,6 @@
 {
   "name": "@abelspithost/commitlint",
-  "version": "0.2.1",
+  "version": "0.2.0",
   "description": "Shared commitlint preset extending @commitlint/config-conventional with stricter defaults",
   "keywords": [
     "commitlint",
@@ -46,6 +46,8 @@
     "deps:update:major": "npx -y npm-check-updates -u --cooldown 2 && npm install",
     "lint": "eslint . && npm run publint",
     "publint": "npx -y publint",
+    "release": "npx tsx release.config.ts",
+    "release:dry-run": "npx -p @abelspithost/conventional-commits-changelog release --dry-run",
     "test:unit": "vitest",
     "test:cov": "vitest run --coverage --coverage.reporter=text",
     "test:cov:ci": "vitest run --coverage",
@@ -58,6 +60,7 @@
     "@commitlint/types": "^21.2.3"
   },
   "devDependencies": {
+    "@abelspithost/conventional-commits-changelog": "^0.0.3",
     "@abelspithost/eslint-config-ts": "^3.2.1",
     "@abelspithost/tsconfig-node": "^0.1.2",
     "@abelspithost/vitest-config": "^0.2.0",
