@@ -1,3 +1,16 @@
+I created this changelog with [@abelspithost/conventional-commits-changelog](https://github.com/aspithost/conventional-commits-changelog)
+
+## 0.2.1 (2026-11-08)
+
+### :construction_worker: Continuous Integration
+
+* target new ci and cicd workflow versions ([b76d01a](https://github.com/aspithost/commitlint/commit/b76d01ab55675531e5e6de1435664fa52cfaf611))
+
+### :books: Documentation
+
+* adds conventional changelog tool, adds changelog ([9942dd1](https://github.com/aspithost/commitlint/commit/9942dd19cd5a21d95b1caef337f67220a31e2490))
+* update readme ([549710a](https://github.com/aspithost/commitlint/commit/549710a2dc37f8df3bdbfb9830dcfb34ce1e54b9))
+
 ## 0.2.0 (2026-11-05)
 
 ## 0.1.10 (2026-10-21)
