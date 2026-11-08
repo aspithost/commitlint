@@ -1,7 +1,7 @@
 # @abelspithost/commitlint
 
 ![NPM Version](https://img.shields.io/npm/v/@abelspithost/commitlint)
-![Build](https://img.shields.io/github/actions/workflow/status/aspithost/commitlint/ci.yml)
+![Build](https://img.shields.io/github/actions/workflow/status/aspithost/commitlint/cicd.yml)
 [![Quality gate status](https://sonarcloud.io/api/project_badges/measure?project=aspithost_commitlint&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=aspithost_commitlint)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=aspithost_commitlint&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=aspithost_commitlint)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=aspithost_commitlint&metric=coverage)](https://sonarcloud.io/summary/new_code?id=aspithost_commitlint)

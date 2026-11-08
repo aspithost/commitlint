@@ -1,5 +1,11 @@
 I created this changelog with [@abelspithost/conventional-commits-changelog](https://github.com/aspithost/conventional-commits-changelog)
 
+## 0.2.3 (2026-11-08)
+
+### :books: Documentation
+
+* update build badge ([4beb744](https://github.com/aspithost/commitlint/commit/4beb744ede055ca3a00528ae85e2e9cd7edc4822))
+
 ## 0.2.2 (2026-11-08)
 
 ### :construction_worker: Continuous Integration
