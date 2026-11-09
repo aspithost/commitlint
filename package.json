@@ -29,10 +29,9 @@
     }
   },
   "bin": {
-    "init": "./bin/cli.mjs"
+    "init": "./dist/cli/init.js"
   },
   "files": [
-    "bin",
     "dist"
   ],
   "engines": {
