@@ -1,6 +1,6 @@
 {
   "name": "@abelspithost/commitlint",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "Shared commitlint preset extending @commitlint/config-conventional with stricter defaults",
   "keywords": [
     "commitlint",
@@ -29,10 +29,9 @@
     }
   },
   "bin": {
-    "init": "./bin/cli.mjs"
+    "init": "./dist/cli/init.js"
   },
   "files": [
-    "bin",
     "dist"
   ],
   "engines": {
