@@ -1,5 +1,19 @@
 I created this changelog with [@abelspithost/conventional-commits-changelog](https://github.com/aspithost/conventional-commits-changelog)
 
+## 0.3.0 (2026-11-09)
+
+### :sparkles: Features
+
+* adds cli script to versioned library code. convert to ts ([efc7948](https://github.com/aspithost/commitlint/commit/efc7948ecc98c2fb1e7747c860dbe99eff13cae9))
+
+### :construction_worker: Continuous Integration
+
+* updates sonar properties ([b047ad2](https://github.com/aspithost/commitlint/commit/b047ad2b9a7d297f35d9843a83c09d3bbdef3b94))
+
+### :books: Documentation
+
+* adds copilot instructions, skills ([be0d0a2](https://github.com/aspithost/commitlint/commit/be0d0a25362cd74bbe8b43239d87d53073579175))
+
 ## 0.2.3 (2026-11-08)
 
 ### :books: Documentation
