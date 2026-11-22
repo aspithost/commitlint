@@ -1,5 +1,11 @@
 I created this changelog with [@abelspithost/conventional-commits-changelog](https://github.com/aspithost/conventional-commits-changelog)
 
+## 0.3.1 (2026-11-22)
+
+### :books: Documentation
+
+* update required node version ([c72410b](https://github.com/aspithost/commitlint/commit/c72410bcc0ce55877e4cd0aca18bf536bc7cab67))
+
 ## 0.3.0 (2026-11-09)
 
 ### :sparkles: Features

@@ -18,7 +18,7 @@ This package provides a shared [commitlint](https://commitlint.js.org/) preset. 
 
 ## Requirements
 
-Use Node.js 24 or later.
+Use Node.js 26 or later.
 
 ## Quick setup
 
